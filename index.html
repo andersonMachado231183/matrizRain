@@ -23,9 +23,7 @@
     </style>
   </head>
   <body>
-    <canvas id="matrix">
-      <h1>Anderson Arnold Machado</h1>
-    </canvas>
+    <canvas id="matrix"> </canvas>
 
     <script>
       // Pegando o elemento do Canvas
@@ -121,14 +119,14 @@
           // movendo as gotas no eixo y
           drops[i]++;
 
-          if (drops[i] * fontSize > c.height && Math.random() > 0.98) {
+          if (drops[i] * fontSize > c.height && Math.random() > 0.95) {
             drops[i] = 0;
           }
         }
         ctx2.font = `40px monospace`;
         ctx2.fillStyle = "#fff";
-        ctx2.fillText("ANDERSON ARNOLD MACHADO", 200, 250);
-        ctx2.fillText("Desenvolvedor Web", 220, 350);
+        ctx2.fillText("ANDERSON ARNOLD MACHADO", c.width / 4, c.height/2);
+        ctx2.fillText("Web Developer", c.width / 4, c.height/3);
 
         // chamada recursiva para animar quadro a quadro
         window.requestAnimationFrame(draw);
